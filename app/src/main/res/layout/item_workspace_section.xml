@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/workspaceSectionItemButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_workspace_section_item"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingVertical="@dimen/workspace_section_button_padding_vertical"
+    android:paddingHorizontal="@dimen/workspace_section_button_padding_horizontal"
+    android:layout_margin="@dimen/workspace_section_button_margin">
+
+    <ImageView
+        android:id="@+id/workspaceSectionItemImage"
+        android:layout_width="@dimen/icon_normal_plus"
+        android:layout_height="@dimen/icon_normal_plus"
+        android:backgroundTint="@color/text_primary"
+        android:contentDescription="@string/workspace_section" />
+
+    <TextView
+        android:id="@+id/workspaceSectionItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/workspace_section"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_normal" />
+
+</LinearLayout>

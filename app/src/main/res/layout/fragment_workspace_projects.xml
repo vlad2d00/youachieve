@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/background_back"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.fragments.workspace.sections.WorkspaceProjectsFragment">
+
+    <TextView
+        android:id="@+id/workspaceProjectsTextStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/text_large"
+        android:textColor="@color/text_primary"
+        android:paddingVertical="@dimen/button_normal_padding_vertical"
+        android:paddingHorizontal="@dimen/button_normal_padding_horizontal"
+        android:background="@drawable/background_circle_light"
+        android:layout_margin="@dimen/indent_message_status"
+        android:text="@string/loading" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workspaceProjectsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

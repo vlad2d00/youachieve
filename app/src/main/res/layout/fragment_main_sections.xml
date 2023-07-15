@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="@color/background_back"
+    tools:context=".presentation.ui.fragments.main.MainSectionsFragment"
+    android:orientation="vertical">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mainSectionsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/header_height" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mainSectionsNavigation"
+        app:menu="@menu/menu_main_navigation"
+        app:labelVisibilityMode="labeled"
+        app:itemPaddingBottom="1dp"
+        android:paddingBottom="1dp"
+        app:itemIconSize="@dimen/icon_normal_plus"
+        android:layout_gravity="bottom"
+        android:background="@drawable/background_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:scrollIndicators="left"/>
+
+</FrameLayout>

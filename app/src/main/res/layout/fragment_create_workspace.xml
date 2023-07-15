@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_back"
+    tools:context=".presentation.ui.fragments.workspace.create.CreateWorkspaceFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:orientation="horizontal"
+        android:background="@drawable/background_header"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:id="@+id/createWorkspaceButtonCancel"
+            android:layout_width="@dimen/button_icon_size"
+            android:layout_height="@dimen/button_icon_size"
+            android:layout_margin="@dimen/header_indent"
+            android:background="@drawable/background_primary_dark"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/icon_normal"
+                android:layout_height="@dimen/icon_normal"
+                android:layout_gravity="center"
+                android:contentDescription="@string/cancel"
+                android:rotation="90"
+                android:src="@drawable/cancel"
+                app:tint="@color/text_on_background" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/createWorkspaceTextHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_huge"
+            android:text="@string/create_workspace_header"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:textColor="@color/text_on_background"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <FrameLayout
+                android:id="@+id/createWorkspaceButtonOk"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:layout_margin="@dimen/header_indent"
+                android:background="@drawable/background_primary_dark"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_normal"
+                    android:layout_height="@dimen/icon_normal"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/ok"
+                    android:src="@drawable/check"
+                    app:tint="@color/text_on_background" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/indent_outside"
+            android:paddingBottom="@dimen/indent_bottom"
+            android:background="@drawable/background_card">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/createWorkspaceImageCover"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cover_height"
+                    android:layout_marginBottom="@dimen/create_entity_cover_margin_bottom_for_avatar"
+                    app:cardCornerRadius="@dimen/round_medium">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/cover"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_cover" />
+
+                    <FrameLayout
+                        android:id="@+id/createWorkspaceButtonChangeCover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_icon_size"
+                        android:layout_margin="@dimen/indent_outside"
+                        android:layout_gravity="start"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.7"
+                            android:background="@drawable/background_circle_light" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="@dimen/button_normal_padding_horizontal_short">
+
+                            <ImageView
+                                android:layout_width="@dimen/icon_normal"
+                                android:layout_height="@dimen/icon_normal"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@string/cancel"
+                                android:src="@drawable/edit"
+                                app:tint="@color/text_primary" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/indent_inside"
+                                android:textSize="@dimen/text_small"
+                                android:textColor="@color/text_primary"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/button_change_cover" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/createWorkspaceButtonDeleteCover"
+                        android:layout_width="@dimen/button_icon_size"
+                        android:layout_height="@dimen/button_icon_size"
+                        android:layout_margin="@dimen/indent_outside"
+                        android:alpha="0.7"
+                        android:background="@drawable/background_circle_light"
+                        android:layout_gravity="end">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_normal"
+                            android:layout_height="@dimen/icon_normal"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/delete"
+                            android:src="@drawable/trash_can"
+                            app:tint="@color/text_primary" />
+
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/createWorkspaceAddImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/indent_outside"
+                android:paddingTop="@dimen/indent_outside"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/createWorkspaceButtonAddAvatar"
+                    android:layout_width="@dimen/icon_huge"
+                    android:layout_height="@dimen/icon_huge"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/background_circle_secondary_dark">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_normal"
+                        android:layout_height="@dimen/icon_normal"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/cancel"
+                        android:src="@drawable/camera"
+                        app:tint="@color/text_on_background" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end">
+
+                    <LinearLayout
+                        android:id="@+id/createWorkspaceButtonAddCover"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/button_normal_padding_horizontal_short"
+                        android:layout_height="@dimen/button_normal_height"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:background="@drawable/background_circle_secondary"
+                        tools:ignore="UselessParent">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_normal"
+                            android:layout_height="@dimen/icon_normal"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/cancel"
+                            android:src="@drawable/camera"
+                            app:tint="@color/text_primary" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/indent_inside"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/text_primary"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/button_add_cover" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/indent_outside">
+
+                <EditText
+                    android:id="@+id/createWorkspaceEditTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_form_height"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_normal"
+                    android:layout_marginTop="@dimen/input_form_margin_vertical"
+                    android:textColorHint="@color/text_secondary"
+                    android:hint="@string/hint_workspace_name"
+                    android:autofillHints="name" />
+
+                <TextView
+                    android:id="@+id/createWorkspaceTextNameError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/text_error"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/createWorkspaceEditTextDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_form_height"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:textSize="@dimen/text_normal"
+                    android:layout_marginTop="@dimen/input_form_margin_vertical"
+                    android:textColorHint="@color/text_secondary"
+                    android:hint="@string/hint_description"
+                    android:autofillHints="password" />
+
+                <Switch
+                    android:id="@+id/createWorkspaceSwitchIsPrivate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_normal"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginStart="@dimen/input_form_indent_catch"
+                    android:layout_marginTop="@dimen/input_form_margin_vertical_plus"
+                    android:text="@string/is_private"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/input_form_indent_catch"
+                    android:layout_marginEnd="@dimen/indent_outside"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/text_secondary"
+                    android:text="@string/hint_workspace_private" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/avatar_normal_border"
+            android:layout_height="@dimen/avatar_normal_border"
+            android:background="@drawable/background_circle_light"
+            android:layout_marginTop="@dimen/create_entity_avatar_border_margin_top"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/createWorkspaceImageAddAvatarOverCover"
+            android:visibility="gone"
+            android:layout_width="@dimen/avatar_normal"
+            android:layout_height="@dimen/avatar_normal"
+            android:layout_marginTop="@dimen/create_entity_avatar_margin_top"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_circle_secondary_dark">
+
+            <ImageView
+                android:layout_width="@dimen/icon_normal"
+                android:layout_height="@dimen/icon_normal"
+                android:contentDescription="@string/cancel"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/camera"
+                app:tint="@color/text_on_background" />
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/createWorkspaceImageAvatarOverCover"
+            android:layout_width="@dimen/avatar_normal"
+            android:layout_height="@dimen/avatar_normal"
+            android:layout_marginTop="@dimen/create_entity_avatar_margin_top"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/infinity">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/avatar"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_cover" />
+
+            <FrameLayout
+                android:id="@+id/createWorkspaceImageAvatarOverCoverShadow"
+                android:layout_width="@dimen/avatar_normal"
+                android:layout_height="@dimen/avatar_normal"
+                android:layout_gravity="center_horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_circle_shadow"
+                    android:alpha="0.5"/>
+
+                <ImageView
+                    android:layout_width="@dimen/icon_normal"
+                    android:layout_height="@dimen/icon_normal"
+                    android:contentDescription="@string/cancel"
+                    android:layout_gravity="center"
+                    android:src="@drawable/camera"
+                    app:tint="@color/text_on_background" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</LinearLayout>

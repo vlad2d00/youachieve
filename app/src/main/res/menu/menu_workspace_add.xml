@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuWorkspaceAddWorkspace"
+        android:icon="@drawable/workspace"
+        android:title="@string/workspace_add_workspace" />
+    <item
+        android:id="@+id/menuWorkspaceAddProject"
+        android:icon="@drawable/project"
+        android:title="@string/workspace_add_project" />
+    <item
+        android:id="@+id/menuWorkspaceAddTask"
+        android:icon="@drawable/task"
+        android:title="@string/workspace_add_task" />
+</menu>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Общее -->
+    <dimen name="text_huge">20sp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_normal">12sp</dimen>
+    <dimen name="text_small">10sp</dimen>
+    <dimen name="text_tiny">8sp</dimen>
+
+    <dimen name="icon_huge">46dp</dimen>
+    <dimen name="icon_large_plus">36dp</dimen>
+    <dimen name="icon_large">32dp</dimen>
+    <dimen name="icon_medium">28dp</dimen>
+    <dimen name="icon_normal_plus">24dp</dimen>
+    <dimen name="icon_normal">20dp</dimen>
+    <dimen name="icon_small">16dp</dimen>
+
+    <dimen name="avatar_normal">100dp</dimen>
+    <dimen name="avatar_normal_border">108dp</dimen>
+    <dimen name="avatar_small">76dp</dimen>
+
+    <dimen name="round_normal">4dp</dimen>
+    <dimen name="round_medium">12dp</dimen>
+    <dimen name="round_large">20dp</dimen>
+
+    <dimen name="indent_inside">8dp</dimen>
+    <dimen name="indent_outside">12dp</dimen>
+    <dimen name="indent_bottom">24dp</dimen>
+    <dimen name="indent_message_status">32dp</dimen>
+
+    <dimen name="button_icon_size">32dp</dimen>
+    <dimen name="button_normal_height">28dp</dimen>
+    <dimen name="button_normal_padding_vertical">8dp</dimen>
+    <dimen name="button_normal_padding_horizontal">28dp</dimen>
+    <dimen name="button_normal_padding_horizontal_short">12dp</dimen>
+
+    <dimen name="input_form_height">36dp</dimen>
+    <dimen name="input_form_margin_vertical">8dp</dimen>
+    <dimen name="input_form_margin_vertical_plus">16dp</dimen>
+    <dimen name="input_form_indent_catch">4dp</dimen>
+
+    <dimen name="card_shadow_size">2dp</dimen>
+
+    <dimen name="notify_padding">2dp</dimen>
+    <dimen name="notify_circle_menu">16dp</dimen>
+
+    <dimen name="infinity">1000dp</dimen>
+
+
+    <!-- Шапка -->
+    <dimen name="header_height">50dp</dimen>
+    <dimen name="header_button_view_width">135dp</dimen>
+    <dimen name="header_padding_vertical">2dp</dimen>
+    <dimen name="header_indent">15dp</dimen>
+    <dimen name="header_shadow_size">1dp</dimen>
+
+
+    <!-- Рабочее пространство -->
+    <dimen name="workspace_header_button_height">22dp</dimen>
+    <dimen name="workspace_header_button_padding_vertical">2dp</dimen>
+    <dimen name="workspace_header_button_padding_horizontal">12dp</dimen>
+
+    <dimen name="workspace_sections_padding">4dp</dimen>
+    <dimen name="workspace_section_height">50dp</dimen>
+    <dimen name="workspace_section_button_padding_vertical">8dp</dimen>
+    <dimen name="workspace_section_button_padding_horizontal">16dp</dimen>
+    <dimen name="workspace_section_button_margin">4dp</dimen>
+
+    <dimen name="workspace_button_add_size">46dp</dimen>
+    <dimen name="workspace_button_add_margin">20dp</dimen>
+
+    <dimen name="project_item_height">100dp</dimen>
+    <dimen name="project_item_margin">8dp</dimen>
+    <dimen name="project_item_padding">4dp</dimen>
+    <dimen name="project_item_footer_height">36dp</dimen>
+    <dimen name="project_border_size">1dp</dimen>
+    <dimen name="project_shadow_size">2dp</dimen>
+
+    <dimen name="cover_height">200dp</dimen>
+    <dimen name="create_entity_cover_margin_bottom_for_avatar">54dp</dimen>
+    <dimen name="create_entity_avatar_margin_top">164dp</dimen>
+    <dimen name="create_entity_avatar_border_margin_top">160dp</dimen>
+
+</resources>

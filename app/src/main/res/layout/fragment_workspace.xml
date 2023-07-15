@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/background_back"
+    tools:context=".presentation.ui.fragments.workspace.main.WorkspaceFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:orientation="horizontal"
+        android:background="@drawable/background_header"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/workspaceButtonMenu"
+                android:layout_width="23dp"
+                android:layout_height="22dp"
+                android:layout_margin="@dimen/header_indent"
+                android:background="@drawable/menu"
+                android:backgroundTint="@color/text_on_background"
+                android:contentDescription="@string/menu" />
+
+            <TextView
+                android:id="@+id/workspaceTextNotifyInviteCount"
+                android:layout_width="@dimen/notify_circle_menu"
+                android:layout_height="@dimen/notify_circle_menu"
+                android:background="@drawable/background_notify_count_menu"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/text_on_background"
+                android:text="+"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/header_padding_vertical"
+            android:layout_marginStart="@dimen/indent_outside">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/workspaceImageCategory"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:src="@drawable/workspaces"
+                    android:layout_marginEnd="@dimen/indent_inside"
+                    android:contentDescription="@string/menu"
+                    app:tint="@color/text_on_background">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/workspaceTextHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_huge"
+                    android:text="@string/loading"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textColor="@color/text_on_background"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/workspaceButtonView"
+                android:layout_width="@dimen/header_button_view_width"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/background_primary_dark"
+                android:paddingVertical="@dimen/workspace_header_button_padding_vertical"
+                android:paddingHorizontal="@dimen/workspace_header_button_padding_horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/workspaceImageView"
+                    android:layout_width="@dimen/icon_small"
+                    android:layout_height="@dimen/icon_small"
+                    android:background="@drawable/list"
+                    android:backgroundTint="@color/text_on_background"
+                    android:layout_marginEnd="@dimen/indent_inside"
+                    android:contentDescription="@string/menu">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/workspaceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_normal"
+                    android:text="@string/workspace_view_list"
+                    android:textColor="@color/text_on_background"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/workspaceButtonNotify"
+                android:layout_width="@dimen/icon_normal"
+                android:layout_height="@dimen/icon_normal"
+                android:background="@drawable/notification"
+                android:backgroundTint="@color/text_on_background"
+                android:layout_margin="@dimen/header_indent"
+                android:contentDescription="@string/menu">
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/workspaceButtonOther"
+                android:layout_width="@dimen/icon_normal"
+                android:layout_height="@dimen/icon_normal"
+                android:background="@drawable/ellipsis_horizontal"
+                android:backgroundTint="@color/text_on_background"
+                android:layout_margin="@dimen/header_indent"
+                android:rotation="90"
+                android:contentDescription="@string/menu">
+            </ImageButton>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/workspaceSectionsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/workspace_section_height" />
+
+    <FrameLayout
+        android:id="@+id/workspaceButtonAdd"
+        android:layout_width="@dimen/workspace_button_add_size"
+        android:layout_height="@dimen/workspace_button_add_size"
+        android:layout_margin="@dimen/workspace_button_add_margin"
+        android:background="@drawable/background_circle_primary"
+        android:elevation="10dp"
+        android:layout_gravity="bottom|end">
+
+        <ImageView
+            android:id="@+id/workspaceButtonAddImage"
+            android:layout_width="@dimen/icon_normal"
+            android:layout_height="@dimen/icon_normal"
+            android:src="@drawable/plus"
+            android:layout_gravity="center"
+            app:tint="@color/text_on_background"
+            android:contentDescription="@string/workspace_add_button"/>
+
+    </FrameLayout>
+
+</FrameLayout>
