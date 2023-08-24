@@ -9,21 +9,21 @@
     android:orientation="vertical"
     android:gravity="center"
     android:paddingVertical="@dimen/workspace_section_button_padding_vertical"
-    android:paddingHorizontal="@dimen/workspace_section_button_padding_horizontal"
-    android:layout_margin="@dimen/workspace_section_button_margin">
+    android:paddingHorizontal="@dimen/workspace_section_button_padding_horizontal">
 
     <ImageView
         android:id="@+id/workspaceSectionItemImage"
         android:layout_width="@dimen/icon_normal_plus"
         android:layout_height="@dimen/icon_normal_plus"
-        android:backgroundTint="@color/text_primary"
-        android:contentDescription="@string/workspace_section" />
+        android:src="@drawable/question"
+        android:contentDescription="@string/workspace_section"
+        app:tint="@color/text_primary" />
 
     <TextView
         android:id="@+id/workspaceSectionItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/workspace_section"
+        android:text="Workspace section"
         android:textColor="@color/text_primary"
         android:textSize="@dimen/text_normal" />
 

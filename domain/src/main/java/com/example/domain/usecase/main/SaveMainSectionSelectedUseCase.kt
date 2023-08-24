@@ -1,6 +1,6 @@
 package com.example.domain.usecase.main
 
-import com.example.domain.models.MainSectionType
+import com.example.domain.models.base.MainSectionType
 import com.example.domain.repository.MainSectionRepository
 import javax.inject.Inject
 

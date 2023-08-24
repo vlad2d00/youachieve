@@ -1,7 +1,7 @@
 package com.example.data.repository
 
 import com.example.data.storage.interfaces.MainSectionStorage
-import com.example.domain.models.MainSectionType
+import com.example.domain.models.base.MainSectionType
 import com.example.domain.repository.MainSectionRepository
 
 class MainSectionRepositoryImpl(

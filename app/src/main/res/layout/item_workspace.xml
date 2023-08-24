@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/workspace_item_height"
+    android:paddingHorizontal="@dimen/indent_medium"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:layout_gravity="center_vertical"
+        app:cardCornerRadius="@dimen/round_normal">
+        <ImageView
+            android:id="@+id/workspaceItemImageAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_avatar"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/avatar" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/workspaceItemTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/indent_normal"
+        android:textColor="@color/text_primary"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_normal"
+        android:text="Workspace name"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/workspaceItemButtonSettings"
+            android:layout_width="@dimen/icon_small"
+            android:layout_height="@dimen/icon_small"
+            android:src="@drawable/ellipsis_horizontal"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/settings"
+            app:tint="@color/text_primary" />
+
+    </LinearLayout>
+
+</LinearLayout>

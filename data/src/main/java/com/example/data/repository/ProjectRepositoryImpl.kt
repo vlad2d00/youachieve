@@ -1,9 +1,8 @@
 package com.example.data.repository
 
-import com.example.data.mapper.ProjectMapper
 import com.example.data.storage.interfaces.ProjectStorage
-import com.example.domain.models.Project
-import com.example.domain.models.Status
+import com.example.domain.models.workspace.Project
+import com.example.domain.models.base.Status
 import com.example.domain.repository.ProjectRepository
 
 class ProjectRepositoryImpl(
@@ -49,36 +48,36 @@ class ProjectRepositoryImpl(
         )
     }
 
-    override fun getProject(projectId: Long,
-                            status: Status?
+    override fun getProject(
+        projectId: Long,
+        status: Status?
     ): Project? {
-        val result = projectStorage.getProject(
+        return projectStorage.getProject(
             projectId = projectId,
             status = status
-        ) ?: return null
-        return ProjectMapper.toDomain(result)
+        )
     }
 
     override fun getProjectList(
         workspaceId: Long,
         format: String?,
+        count: Int?,
+        offset: Int,
         status: Status?
     ): List<Project>? {
-        val items = projectStorage.getProjectList(
+        return projectStorage.getProjectList(
             workspaceId = workspaceId,
             format = format,
-            status = status
-        ) ?: return null
 
-        val result = ArrayList<Project>()
-        for (item in items) {
-            result.add(ProjectMapper.toDomain(item))
-        }
-        return result.toList()
+            count = count,
+            offset = offset,
+            status = status
+        )
     }
 
-    override fun deleteProject(projectId: Long,
-                               status: Status?
+    override fun deleteProject(
+        projectId: Long,
+        status: Status?
     ) {
         projectStorage.deleteProject(
             projectId = projectId,

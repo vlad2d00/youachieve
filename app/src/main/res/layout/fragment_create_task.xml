@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:background="@color/background_back"
-    tools:context=".presentation.ui.fragments.workspace.create.CreateTaskFragment"
+    tools:context=".presentation.fragments.workspace.create.CreateTaskFragment"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,21 +16,24 @@
         android:gravity="center_vertical">
 
         <FrameLayout
-            android:id="@+id/createTaskButtonCancel"
-            android:layout_width="@dimen/button_icon_size"
-            android:layout_height="@dimen/button_icon_size"
-            android:layout_margin="@dimen/header_indent"
-            android:background="@drawable/background_primary_dark"
-            android:layout_gravity="center">
+            android:layout_width="@dimen/header_height"
+            android:layout_height="@dimen/header_height">
 
-            <ImageView
-                android:layout_width="@dimen/icon_normal"
-                android:layout_height="@dimen/icon_normal"
-                android:layout_gravity="center"
-                android:contentDescription="@string/cancel"
-                android:rotation="90"
-                android:src="@drawable/cancel"
-                app:tint="@color/text_on_background" />
+            <FrameLayout
+                android:id="@+id/createTaskButtonCancel"
+                android:layout_width="@dimen/button_icon_size"
+                android:layout_height="@dimen/button_icon_size"
+                android:background="@drawable/background_button_primary_dark"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_width="@dimen/icon_normal"
+                    android:layout_height="@dimen/icon_normal"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/cancel"
+                    android:rotation="90"
+                    android:src="@drawable/cancel"
+                    app:tint="@color/text_on_background" />
+            </FrameLayout>
 
         </FrameLayout>
 
@@ -41,7 +44,7 @@
             android:textSize="@dimen/text_huge"
             android:text="@string/create_task_header"
             android:textStyle="bold"
-            android:maxLines="1"
+            android:layout_marginStart="@dimen/indent_normal"
             android:textColor="@color/text_on_background"/>
 
         <LinearLayout
@@ -50,81 +53,27 @@
             android:gravity="end">
 
             <FrameLayout
-                android:id="@+id/createTaskButtonOk"
-                android:layout_width="@dimen/button_icon_size"
-                android:layout_height="@dimen/button_icon_size"
-                android:layout_margin="@dimen/header_indent"
-                android:background="@drawable/background_primary_dark"
-                android:layout_gravity="center">
+                android:layout_width="@dimen/header_height"
+                android:layout_height="@dimen/header_height">
 
-                <ImageView
-                    android:layout_width="@dimen/icon_normal"
-                    android:layout_height="@dimen/icon_normal"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/ok"
-                    android:src="@drawable/check"
-                    app:tint="@color/text_on_background" />
+                <FrameLayout
+                    android:id="@+id/createTaskButtonOk"
+                    android:layout_width="@dimen/button_icon_size"
+                    android:layout_height="@dimen/button_icon_size"
+                    android:background="@drawable/background_button_primary_dark"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/ok"
+                        android:src="@drawable/check"
+                        app:tint="@color/text_on_background" />
+                </FrameLayout>
 
             </FrameLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/indent_outside"
-        android:paddingBottom="@dimen/indent_bottom"
-        android:background="@drawable/background_card_internal"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_normal"
-            android:textColor="@color/text_header"
-            android:textStyle="bold"
-            android:text="@string/workspace" />
-
-        <Spinner
-            android:id="@+id/createTaskSpinnerWorkspace"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/input_form_margin_vertical"/>
-
-        <TextView
-            android:id="@+id/createTaskSpinnerWorkspaceError"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/input_form_indent_catch"
-            android:textSize="@dimen/text_small"
-            android:textColor="@color/text_error"
-            android:visibility="gone"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_normal"
-            android:textColor="@color/text_header"
-            android:layout_marginTop="@dimen/input_form_margin_vertical"
-            android:textStyle="bold"
-            android:text="@string/project" />
-
-        <Spinner
-            android:id="@+id/createTaskSpinnerProject"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/input_form_margin_vertical"/>
-
-        <TextView
-            android:id="@+id/createTaskSpinnerProjectError"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/input_form_indent_catch"
-            android:textSize="@dimen/text_small"
-            android:textColor="@color/text_error"
-            android:visibility="gone"/>
 
     </LinearLayout>
 
@@ -141,156 +90,284 @@
             android:scaleType="centerCrop"
             android:contentDescription="@string/cover"/>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/indent_outside"
-            android:paddingBottom="@dimen/indent_bottom"
-            android:background="@drawable/background_card">
-
-            <LinearLayout
-                android:id="@+id/createTaskButtonAddCover"
-                android:layout_width="wrap_content"
-                android:paddingHorizontal="@dimen/button_normal_padding_horizontal_short"
-                android:layout_height="@dimen/button_normal_height"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/indent_outside"
-                android:layout_marginBottom="@dimen/input_form_margin_vertical"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/background_circle_secondary"
-                tools:ignore="UselessParent">
-
-                <ImageView
-                    android:layout_width="@dimen/icon_normal"
-                    android:layout_height="@dimen/icon_normal"
-                    android:layout_gravity="center_vertical"
-                    android:contentDescription="@string/cancel"
-                    android:src="@drawable/camera"
-                    app:tint="@color/text_primary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/indent_inside"
-                    android:textSize="@dimen/text_small"
-                    android:textColor="@color/text_primary"
-                    android:layout_gravity="center_vertical"
-                    android:text="@string/button_add_cover" />
-
-            </LinearLayout>
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/indent_outside"
                 android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/createTaskEditTextName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:textSize="@dimen/text_normal"
-                    android:textColorHint="@color/text_secondary"
-                    android:hint="@string/hint_task_name"
-                    android:autofillHints="name" />
-
-                <TextView
-                    android:id="@+id/createTaskTextNameError"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/input_form_indent_catch"
-                    android:textSize="@dimen/text_small"
-                    android:textColor="@color/text_error"
-                    android:visibility="gone"/>
-
-                <EditText
-                    android:id="@+id/createTaskEditTextDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textMultiLine"
-                    android:textSize="@dimen/text_normal"
-                    android:layout_marginTop="@dimen/input_form_margin_vertical"
-                    android:textColorHint="@color/text_secondary"
-                    android:hint="@string/hint_description"
-                    android:autofillHints="password" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/input_form_margin_vertical_plus"
-                    android:layout_marginStart="@dimen/input_form_indent_catch"
-                    android:orientation="horizontal">
+                    android:padding="@dimen/indent_medium"
+                    android:paddingBottom="@dimen/indent_bottom"
+                    android:background="@drawable/background_card_internal"
+                    android:orientation="vertical">
 
-                    <FrameLayout
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="top">
+                        android:textSize="@dimen/text_normal"
+                        android:textColor="@color/text_header"
+                        android:textStyle="bold"
+                        android:text="@string/workspace" />
+
+                    <Spinner
+                        android:id="@+id/createTaskSpinnerWorkspace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/input_form_margin_vertical"/>
+
+                    <TextView
+                        android:id="@+id/createTaskSpinnerWorkspaceError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/input_form_indent_catch"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/text_error"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_normal"
+                        android:textColor="@color/text_header"
+                        android:layout_marginTop="@dimen/input_form_margin_vertical"
+                        android:textStyle="bold"
+                        android:text="@string/project" />
+
+                    <Spinner
+                        android:id="@+id/createTaskSpinnerProject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/input_form_margin_vertical"/>
+
+                    <TextView
+                        android:id="@+id/createTaskSpinnerProjectError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/input_form_indent_catch"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/text_error"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/indent_medium"
+                    android:paddingBottom="@dimen/indent_bottom"
+                    android:background="@drawable/background_card">
+
+                    <LinearLayout
+                        android:id="@+id/createTaskButtonAddCover"
+                        android:layout_width="wrap_content"
+                        android:paddingHorizontal="@dimen/button_normal_padding_horizontal_short"
+                        android:layout_height="@dimen/button_normal_height"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/indent_medium"
+                        android:layout_marginBottom="@dimen/input_form_margin_vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/background_circle_secondary"
+                        tools:ignore="UselessParent">
+
                         <ImageView
                             android:layout_width="@dimen/icon_normal"
                             android:layout_height="@dimen/icon_normal"
-                            android:layout_gravity="center"
-                            android:contentDescription="@string/cancel"
-                            android:src="@drawable/calendar"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/photo"
+                            android:src="@drawable/camera"
                             app:tint="@color/text_primary" />
-                    </FrameLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/indent_normal"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/text_primary"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/button_add_cover" />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="@dimen/indent_inside"
+                        android:layout_marginHorizontal="@dimen/indent_medium"
                         android:orientation="vertical">
 
-                        <LinearLayout
-                            android:id="@+id/createTaskButtonDatetimeBegin"
+                        <EditText
+                            android:id="@+id/createTaskEditTextName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:textSize="@dimen/text_normal"
+                            android:textColorHint="@color/text_secondary"
+                            android:hint="@string/hint_task_name"
+                            android:autofillHints="name" />
+
+                        <TextView
+                            android:id="@+id/createTaskTextNameError"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/input_form_indent_catch"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/text_error"
+                            android:visibility="gone"/>
+
+                        <EditText
+                            android:id="@+id/createTaskEditTextDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textMultiLine"
+                            android:textSize="@dimen/text_normal"
+                            android:layout_marginTop="@dimen/input_form_margin_vertical"
+                            android:textColorHint="@color/text_secondary"
+                            android:hint="@string/hint_description"
+                            android:autofillHints="password" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/input_form_margin_vertical_plus"
+                            android:layout_marginStart="@dimen/input_form_indent_catch"
                             android:orientation="horizontal">
 
-                            <TextView
+                            <FrameLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="@dimen/text_normal"
-                                android:textColor="@color/text_primary"
-                                android:text="@string/datetime_begin"/>
+                                android:layout_gravity="top">
+                                <ImageView
+                                    android:layout_width="@dimen/icon_normal"
+                                    android:layout_height="@dimen/icon_normal"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/calendar"
+                                    android:src="@drawable/calendar"
+                                    app:tint="@color/text_primary" />
+                            </FrameLayout>
 
-                            <TextView
-                                android:id="@+id/createTaskTextDatetimeBegin"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/indent_inside"
-                                android:textSize="@dimen/text_normal"
-                                android:textColor="@color/text_secondary"
-                                android:text="@string/value_not_set"/>
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/indent_normal"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/createTaskButtonDatetimeBegin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/text_normal"
+                                        android:textColor="@color/text_primary"
+                                        android:text="@string/datetime_begin"/>
+
+                                    <TextView
+                                        android:id="@+id/createTaskTextDatetimeBegin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/indent_normal"
+                                        android:textSize="@dimen/text_normal"
+                                        android:textColor="@color/text_secondary"
+                                        android:text="@string/value_not_set"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/createTaskButtonDatetimeEnd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/input_form_margin_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="@dimen/text_normal"
+                                        android:textColor="@color/text_primary"
+                                        android:text="@string/datetime_end"/>
+
+                                    <TextView
+                                        android:id="@+id/createTaskTextDatetimeEnd"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/indent_normal"
+                                        android:textSize="@dimen/text_normal"
+                                        android:textColor="@color/text_secondary"
+                                        android:text="@string/value_not_set"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/createTaskButtonDatetimeEnd"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/input_form_margin_vertical"
+                            android:gravity="start"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/input_form_margin_vertical_plus"
+                            android:layout_marginStart="@dimen/input_form_indent_catch"
                             android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="@dimen/text_normal"
-                                android:textColor="@color/text_primary"
-                                android:text="@string/datetime_end"/>
+                            <ImageView
+                                android:layout_width="@dimen/icon_normal"
+                                android:layout_height="@dimen/icon_normal"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/user"
+                                android:src="@drawable/user"
+                                app:tint="@color/text_primary" />
 
-                            <TextView
-                                android:id="@+id/createTaskTextDatetimeEnd"
+                            <FrameLayout
+                                android:id="@+id/createTaskListUsers"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/indent_inside"
-                                android:textSize="@dimen/text_normal"
-                                android:textColor="@color/text_secondary"
-                                android:text="@string/value_not_set"/>
+                                android:layout_marginStart="@dimen/indent_normal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/createTaskImageUser"
+                                    android:layout_width="@dimen/icon_large"
+                                    android:layout_height="@dimen/icon_large"
+                                    app:cardCornerRadius="@dimen/infinity">
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:scaleType="centerCrop"
+                                        android:contentDescription="@string/avatar"
+                                        android:src="@drawable/image_avatar" />
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/createTaskButtonAddUser"
+                                android:layout_width="@dimen/icon_large"
+                                android:layout_height="@dimen/icon_large"
+                                android:layout_marginStart="@dimen/indent_normal"
+                                android:background="@drawable/background_button_primary_dark">
+
+                                <ImageView
+                                    android:layout_width="@dimen/icon_small"
+                                    android:layout_height="@dimen/icon_small"
+                                    android:layout_gravity="center"
+                                    android:contentDescription="@string/add"
+                                    android:src="@drawable/plus"
+                                    app:tint="@color/text_on_background" />
+
+                            </FrameLayout>
 
                         </LinearLayout>
 
@@ -298,67 +375,9 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:layout_gravity="start"
-                    android:layout_marginTop="@dimen/input_form_margin_vertical_plus"
-                    android:layout_marginStart="@dimen/input_form_indent_catch"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="@dimen/icon_normal"
-                        android:layout_height="@dimen/icon_normal"
-                        android:layout_gravity="center"
-                        android:contentDescription="@string/cancel"
-                        android:src="@drawable/user"
-                        app:tint="@color/text_primary" />
-
-                    <FrameLayout
-                        android:id="@+id/createTaskListUsers"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/indent_inside">
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/createTaskImageUser"
-                            android:layout_width="@dimen/icon_large"
-                            android:layout_height="@dimen/icon_large"
-                            app:cardCornerRadius="@dimen/infinity">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:scaleType="centerCrop"
-                                android:contentDescription="@string/avatar"
-                                android:src="@drawable/image_avatar" />
-                        </androidx.cardview.widget.CardView>
-
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:id="@+id/createTaskButtonAddUser"
-                        android:layout_width="@dimen/icon_large"
-                        android:layout_height="@dimen/icon_large"
-                        android:layout_marginStart="@dimen/indent_inside"
-                        android:background="@drawable/background_primary_dark">
-
-                        <ImageView
-                            android:layout_width="@dimen/icon_small"
-                            android:layout_height="@dimen/icon_small"
-                            android:layout_gravity="center"
-                            android:contentDescription="@string/cancel"
-                            android:src="@drawable/plus"
-                            app:tint="@color/text_on_background" />
-
-                    </FrameLayout>
-
-                </LinearLayout>
-
             </LinearLayout>
 
-        </LinearLayout>
+        </ScrollView>
 
     </FrameLayout>
 

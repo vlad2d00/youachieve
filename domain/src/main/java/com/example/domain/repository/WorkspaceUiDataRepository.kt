@@ -1,6 +1,6 @@
 package com.example.domain.repository
 
-import com.example.domain.models.WorkspaceSectionCategory
+import com.example.domain.models.workspace.WorkspaceSectionCategory
 
 interface WorkspaceUiDataRepository {
     fun getWorkspaceIdSelected(): Long

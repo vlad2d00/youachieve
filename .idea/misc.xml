@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable-v24/check_solid.xml" value="0.1375" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.108" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable-v24/plus_solid.xml" value="0.1935" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/achieve.xml" value="0.2205" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_circle.xml" value="0.146" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_circle_light.xml" value="0.1555" />
@@ -11,39 +13,60 @@
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_circle_secondary.xml" value="0.1555" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_circle_secondary_dark.xml" value="0.1555" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_circle_shadow.xml" value="0.137" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_circle_with_shadow.xml" value="0.1455" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_header.xml" value="0.1365" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_header_view.xml" value="0.143" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_button_secondary.xml" value="0.1755" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_card.xml" value="0.1415" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_card_internal.xml" value="0.1325" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_checkbox.xml" value="0.1455" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_checkbox_checked.xml" value="0.1375" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_checkbox_cheked.xml" value="0.152" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_checkbox_true.xml" value="0.1455" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle.xml" value="0.1415" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_content.xml" value="0.1935" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_light.xml" value="0.1" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_primary.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_primary_light.xml" value="0.143" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_primaty_with_shadow.xml" value="0.1455" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_secondary.xml" value="0.143" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_secondary_dark.xml" value="0.1" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_shadow.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_circle_transparent.xml" value="0.1415" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_header.xml" value="0.1635" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_list_item_workspace_section.xml" value="0.154" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_list_item_workspace_section_selected.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_nav.xml" value="0.158" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_navigation_header.xml" value="0.1935" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_notification.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_notification_circle.xml" value="0.1635" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_notification_menu.xml" value="0.1455" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_notify_count_menu.xml" value="0.154" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_primary_dark.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_project_item.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_sections.xml" value="0.1455" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_splash.xml" value="0.12" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_task_item.xml" value="0.1455" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_task_item_footer.xml" value="0.1455" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_workspace_section_item.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/background_workspace_section_item_selected.xml" value="0.12" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/border.xml" value="0.1205" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/check.xml" value="0.1375" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/comment.xml" value="0.2205" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/ellipsis_horizontal.xml" value="0.1635" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/ellipsis_vertical.xml" value="0.1635" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/ic_achieve.xml" value="0.2205" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/ic_launcher_background.xml" value="0.108" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/question.xml" value="0.143" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/drawable/search.xml" value="0.1455" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout-v28/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout-v28/fragment_create_workspace.xml" value="0.25" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout-v31/list_item_project.xml" value="0.22735507246376813" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/activity_create_workspace.xml" value="0.22871376811594202" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/activity_navigation.xml" value="0.25" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/activity_splash.xml" value="0.21014492753623187" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/activity_tmp.xml" value="0.25" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/activity_workspace_entity.xml" value="0.1" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/app_bar_navigation.xml" value="0.25" />
@@ -73,18 +96,25 @@
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/fragment_workspace_sections2.xml" value="0.22327898550724637" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/fragment_workspace_tasks.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/fragment_workspace_users.xml" value="0.22780797101449277" />
-        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/fragment_workspace_workspaces.xml" value="0.1" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/fragment_workspace_workspaces.xml" value="0.264" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/header_navigation.xml" value="0.25" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/home_fragment.xml" value="0.264" />
-        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/item_project.xml" value="0.2259963768115942" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/item_project.xml" value="0.3530778164924506" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/item_task.xml" value="0.37014314928425357" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/item_task_container.xml" value="0.264" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/item_workspace.xml" value="0.264" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/item_workspace_section.xml" value="0.23641304347826086" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/list_item_project.xml" value="0.3858520900321543" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/list_item_workspace.xml" value="0.6" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/list_item_workspace_section.xml" value="0.536" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/messenger_fragment.xml" value="0.20512820512820512" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/nav_header_navigation.xml" value="0.25" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/navigation_header.xml" value="0.264" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/services_fragment.xml" value="0.20512820512820512" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/settings_fragment.xml" value="0.20427350427350427" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/layout/workspace_fragment.xml" value="0.20512820512820512" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/menu/menu_main_navigation.xml" value="0.25" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/menu/menu_navigation.xml" value="0.25" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/menu/menu_workspace_add.xml" value="0.25" />
         <entry key="..\:/Users/vlad2/AndroidStudioProjects/YouAchieve/app/src/main/res/menu/nav_menu.xml" value="0.25" />

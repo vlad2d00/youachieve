@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workspaceSectionsLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:background="@color/background_back"
-    tools:context=".presentation.ui.fragments.workspace.main.WorkspaceSectionsFragment">
+    tools:context=".presentation.fragments.workspace.main.WorkspaceSectionsFragment">
 
     <ImageView
         android:id="@+id/workspaceSectionsImageCover"
@@ -24,8 +25,7 @@
             android:id="@+id/workspaceSectionsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/shadow"
-            android:padding="@dimen/workspace_sections_padding" />
+            android:background="@color/shadow"/>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/workspaceSectionsDetailFragment"

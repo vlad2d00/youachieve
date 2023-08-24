@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/taskItemImageCover"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/task_item_height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_cover"
+        android:contentDescription="@string/cover" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/indent_normal">
+
+        <FrameLayout
+            android:id="@+id/taskItemCheckbox"
+            android:layout_width="@dimen/icon_normal"
+            android:layout_height="@dimen/icon_normal"
+            android:background="@drawable/background_checkbox">
+
+            <ImageView
+                android:id="@+id/taskItemImageChecked"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/checkbox_padding"
+                android:src="@drawable/check_solid"
+                app:tint="@color/content"
+                android:contentDescription="@string/icon" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/indent_normal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/taskItemTextName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_normal"
+                android:textColor="@color/text_primary"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Task name"/>
+
+            <TextView
+                android:id="@+id/taskItemTextDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/text_secondary"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Task description"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/taskItemTextDatetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/datetime_far"
+                    android:text="Task datetime"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/indent_normal">
+
+                    <TextView
+                        android:id="@+id/taskItemTextProjectName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/text_secondary"
+                        android:layout_gravity="end"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="Project name"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

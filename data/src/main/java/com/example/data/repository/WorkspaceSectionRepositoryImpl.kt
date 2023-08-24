@@ -1,10 +1,9 @@
 package com.example.data.repository
 
-import com.example.data.mapper.WorkspaceSectionMapper
 import com.example.data.storage.interfaces.WorkspaceSectionStorage
-import com.example.domain.models.WorkspaceSection
-import com.example.domain.models.WorkspaceSectionCategory
-import com.example.domain.models.WorkspaceSectionType
+import com.example.domain.models.workspace.WorkspaceSection
+import com.example.domain.models.workspace.WorkspaceSectionCategory
+import com.example.domain.models.workspace.WorkspaceSectionType
 import com.example.domain.repository.WorkspaceSectionRepository
 
 class WorkspaceSectionRepositoryImpl(
@@ -15,19 +14,22 @@ class WorkspaceSectionRepositoryImpl(
         return workspaceSectionStorage.getSelected()
     }
 
-    override fun getSectionList(workspaceSectionCategory: WorkspaceSectionCategory): List<WorkspaceSection> {
-        val items = workspaceSectionStorage.getSectionList(workspaceSectionCategory)
-        val result = ArrayList<WorkspaceSection>()
+    override fun getDistance(
+        sectionTypeFrom: WorkspaceSectionType,
+        sectionTypeTo: WorkspaceSectionType,
+        category: WorkspaceSectionCategory
+    ): Int {
+        return workspaceSectionStorage.getDistance(
+            sectionTypeFrom = sectionTypeFrom,
+            sectionTypeTo = sectionTypeTo,
+            category = category
+        )
+    }
 
-        for (item in items) {
-            result.add(
-                WorkspaceSectionMapper.toDomain(
-                    item,
-                    item.type == workspaceSectionStorage.getSelected()
-                )
-            )
-        }
-        return result.toList()
+    override fun getSectionList(
+        workspaceSectionCategory: WorkspaceSectionCategory
+    ): List<WorkspaceSection> {
+        return workspaceSectionStorage.getSectionList(workspaceSectionCategory)
     }
 
     override fun saveSelected(workspaceSectionType: WorkspaceSectionType) {

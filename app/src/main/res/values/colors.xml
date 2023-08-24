@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--  Отрисовка оснонвых элементов  -->
     <color name="text_primary">#000417</color>
     <color name="text_secondary">#6A6A6A</color>
     <color name="text_header">#505050</color>
     <color name="text_on_background">#FFFFFF</color>
     <color name="text_error">#DC0C0C</color>
 
-    <color name="primary">#1C7EE6</color>
+
+    <!--  Основные цвета  -->
+    <color name="primary">#258FFF</color>
     <color name="primary_dark">#0067CF</color>
     <color name="primary_light">#85B0DC</color>
     <color name="secondary">#C5C5C5</color>
     <color name="secondary_dark">#3E3E3E</color>
     <color name="content">#FFFFFF</color>
     <color name="background_back">#CFCFCF</color>
-    <color name="background_notify">#F02F2F</color>
+    <color name="background_notification_primary">#F02F2F</color>
 
+
+    <!--  Тени и свет  -->
     <color name="shadow">#80000000</color>
     <color name="shadow_light">#33000000</color>
-    <color name="light">#80FFFFFF</color>
+    <color name="light">#CCFFFFFF</color>
 
 
-    <!--  Пусть пока останется  -->
-<!--    <color name="black">#FF000000</color>-->
-<!--    <color name="white">#FFFFFFFF</color>-->
-<!--    <color name="purple_200">#FFBB86FC</color>-->
-<!--    <color name="purple_500">#FF6200EE</color>-->
-<!--    <color name="purple_700">#FF3700B3</color>-->
-<!--    <color name="teal_200">#FF03DAC5</color>-->
-<!--    <color name="teal_700">#FF018786</color>-->
+    <!--  Состояния даты и времени  -->
+    <color name="datetime_far">#000BFF</color>
+    <color name="datetime_soon">#FF7700</color>
+    <color name="datetime_overdue">#FF0000</color>
+
+
+    <!--  для иконки  -->
+    <color name="white">#FFFFFF</color>
+
 
 </resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/shadow" />
+            <corners android:radius="@dimen/round_normal"/>
+        </shape>
+    </item>
+
+    <item android:bottom="@dimen/checkbox_border_size"
+        android:top="@dimen/checkbox_border_size"
+        android:left="@dimen/checkbox_border_size"
+        android:right="@dimen/checkbox_border_size">
+
+        <shape android:shape="rectangle">
+            <solid android:color="@color/text_secondary" />
+            <corners android:radius="@dimen/round_normal"/>
+        </shape>
+    </item>
+
+</layer-list>

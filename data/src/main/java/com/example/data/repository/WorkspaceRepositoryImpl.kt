@@ -1,9 +1,8 @@
 package com.example.data.repository
 
-import com.example.data.mapper.WorkspaceMapper
 import com.example.data.storage.interfaces.WorkspaceStorage
-import com.example.domain.models.Status
-import com.example.domain.models.Workspace
+import com.example.domain.models.base.Status
+import com.example.domain.models.workspace.Workspace
 import com.example.domain.repository.WorkspaceRepository
 
 class WorkspaceRepositoryImpl(
@@ -50,36 +49,36 @@ class WorkspaceRepositoryImpl(
         )
     }
 
-    override fun getWorkspace(workspaceId: Long,
-                              status: Status?
+    override fun getWorkspace(
+        workspaceId: Long,
+        status: Status?
     ): Workspace? {
-        val result = workspaceStorage.getWorkspace(
+        return workspaceStorage.getWorkspace(
             workspaceId = workspaceId,
             status = status
-        ) ?: return null
-        return WorkspaceMapper.toDomain(result)
+        )
     }
 
-    override fun getWorkspaceList(userId: Long?,
-                                  format: String?,
-                                  status: Status?
+    override fun getWorkspaceList(
+        userId: Long,
+        format: String?,
+        count: Int?,
+        offset: Int,
+        status: Status?
     ): List<Workspace>? {
-        val items = workspaceStorage.getWorkspaceList(
+        return workspaceStorage.getWorkspaceList(
             userId = userId,
             format = format,
+
+            count = count,
+            offset = offset,
             status = status
-        ) ?: return null
-
-        val result = ArrayList<Workspace>()
-
-        for (item in items) {
-            result.add(WorkspaceMapper.toDomain(item))
-        }
-        return result.toList()
+        )
     }
 
-    override fun deleteWorkspace(workspaceId: Long,
-                                 status: Status?
+    override fun deleteWorkspace(
+        workspaceId: Long,
+        status: Status?
     ) {
         workspaceStorage.deleteWorkspace(
             workspaceId = workspaceId,

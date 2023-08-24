@@ -1,6 +1,7 @@
 package com.example.youachieve.presentation.utils
 
 import android.util.Log
+import com.example.domain.utils.LogData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -20,6 +21,6 @@ fun <R> CoroutineScope.executeAsyncTask(
         onPostExecute(result)
     }
     catch (e: Exception) {
-        Log.e("YouAchieve", e.toString())
+        Log.e(LogData.TAG_APP, e.toString())
     }
 }

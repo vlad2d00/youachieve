@@ -27,7 +27,7 @@ interface TaskRoomDao {
     // GET
 
     @Query("SELECT * FROM tasks " +
-            "ORDER BY datetime_begin;")
+            "ORDER BY datetime_end;")
     fun getTaskListAll(): List<TaskRoomEntity>?
 
     @Query("SELECT * FROM tasks " +
@@ -38,17 +38,24 @@ interface TaskRoomDao {
     @Query("SELECT tasks.* FROM tasks " +
             "JOIN task_participants  ON task_participants.task_id = tasks.id " +
             "WHERE task_participants.user_id = :userId " +
-            "ORDER BY tasks.datetime_begin;")
+            "ORDER BY tasks.datetime_end;")
     fun getTaskListByUserId(userId: Long): List<TaskRoomEntity>?
 
     @Query("SELECT tasks.* FROM tasks " +
-            "JOIN projects  ON projects.id = tasks.project_id " +
+            "JOIN projects ON projects.id = tasks.project_id " +
             "WHERE projects.id = :projectId " +
-            "ORDER BY tasks.datetime_begin;")
+            "ORDER BY tasks.datetime_end;")
     fun getTaskListByProjectId(projectId: Long): List<TaskRoomEntity>?
 
+    @Query("SELECT tasks.* FROM tasks " +
+            "JOIN projects ON projects.id = tasks.project_id " +
+            "JOIN workspaces ON workspaces.id = projects.workspace_id " +
+            "WHERE workspaces.id = :workspaceId " +
+            "ORDER BY tasks.datetime_end;")
+    fun getTaskListByWorkspaceId(workspaceId: Long): List<TaskRoomEntity>?
+
     @Query("SELECT users.* FROM task_participants " +
-            "JOIN users  ON users.id = task_participants.user_id " +
+            "JOIN users ON users.id = task_participants.user_id " +
             "WHERE task_participants.task_id = :taskId " +
             "ORDER BY users.first_name, users.last_name;")
     fun getUserListByTaskId(taskId: Long): List<UserRoomEntity>?

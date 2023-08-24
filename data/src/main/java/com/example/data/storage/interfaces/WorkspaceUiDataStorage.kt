@@ -1,6 +1,6 @@
 package com.example.data.storage.interfaces
 
-import com.example.domain.models.WorkspaceSectionCategory
+import com.example.domain.models.workspace.WorkspaceSectionCategory
 
 interface WorkspaceUiDataStorage {
     fun getWorkspaceIdSelected(): Long

@@ -1,12 +1,12 @@
 package com.example.domain.usecase.workspace.workspace
 
-import com.example.domain.models.Status
+import com.example.domain.models.base.Status
 import com.example.domain.repository.WorkspaceRepository
 import javax.inject.Inject
 
 class CreateWorkspaceUseCase @Inject constructor(
-    val workspaceRepository: WorkspaceRepository
-) {
+    val workspaceRepository: WorkspaceRepository) {
+
     fun execute(name: String,
                 description: String? = null,
                 isPrivate: Boolean,

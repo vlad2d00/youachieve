@@ -83,7 +83,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 
     // Работа с мультимедиа и загрузки изображений
-    implementation "com.github.bumptech.glide:glide:4.14.2"
+//    implementation "com.github.bumptech.glide:glide:4.14.2"
 
     // Тесты
     testImplementation "junit:junit:4.13.2"

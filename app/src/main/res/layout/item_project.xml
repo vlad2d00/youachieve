@@ -1,88 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/project_item_height">
 
     <FrameLayout
-        android:id="@+id/projectItem"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/project_item_height"
-        android:layout_margin="@dimen/indent_inside"
-        android:background="@drawable/background_project_item"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_project_item">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="@dimen/round_normal">
-
             <ImageView
                 android:id="@+id/projectItemImageCover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_cover"
-                android:contentDescription="@string/other" />
-
-            <FrameLayout
-                android:id="@+id/projectItemButtonOther"
-                android:layout_width="@dimen/icon_medium"
-                android:layout_height="@dimen/icon_medium"
-                android:layout_gravity="end"
-                android:background="@drawable/background_circle_shadow"
-                android:layout_margin="@dimen/project_item_padding">
-
-                <ImageView
-                    android:layout_width="@dimen/icon_normal"
-                    android:layout_height="@dimen/icon_normal"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/project"
-                    android:rotation="90"
-                    android:src="@drawable/ellipsis_horizontal"
-                    app:tint="@color/text_on_background" />
-
-            </FrameLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/project_item_footer_height"
-                android:orientation="horizontal"
-                android:background="@color/shadow"
-                android:layout_gravity="bottom"
-                android:gravity="center_vertical">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="@dimen/icon_medium"
-                    android:layout_height="@dimen/icon_medium"
-                    android:layout_marginStart="@dimen/project_item_padding"
-                    app:cardCornerRadius="@dimen/round_normal">
-
-                    <ImageView
-                        android:id="@+id/projectItemImageAvatar"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/image_cover"
-                        android:contentDescription="@string/icon"
-                        android:scaleType="centerCrop"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/projectItemText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/project"
-                    android:textColor="@color/text_on_background"
-                    android:textSize="@dimen/text_normal"
-                    android:layout_marginStart="@dimen/indent_inside"/>
-
-            </LinearLayout>
-
+                android:contentDescription="@string/cover" />
         </androidx.cardview.widget.CardView>
 
     </FrameLayout >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/projectItemButtonOther"
+        android:layout_width="@dimen/icon_medium"
+        android:layout_height="@dimen/icon_medium"
+        android:layout_gravity="end"
+        android:background="@drawable/background_circle_shadow"
+        android:layout_margin="@dimen/indent_small">
+
+        <ImageView
+            android:layout_width="@dimen/icon_normal"
+            android:layout_height="@dimen/icon_normal"
+            android:layout_gravity="center"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/ellipsis_horizontal"
+            app:tint="@color/text_on_background" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/project_item_footer_height"
+        android:orientation="horizontal"
+        android:background="@color/shadow"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:layout_marginStart="@dimen/indent_small"
+            app:cardCornerRadius="@dimen/round_normal">
+
+            <ImageView
+                android:id="@+id/projectItemImageAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image_cover"
+                android:contentDescription="@string/avatar"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/projectItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/project"
+            android:textColor="@color/text_on_background"
+            android:textSize="@dimen/text_normal"
+            android:layout_marginStart="@dimen/indent_normal"/>
+
+    </LinearLayout>
+
+</FrameLayout>

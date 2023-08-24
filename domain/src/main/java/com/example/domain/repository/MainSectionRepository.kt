@@ -1,6 +1,6 @@
 package com.example.domain.repository
 
-import com.example.domain.models.MainSectionType
+import com.example.domain.models.base.MainSectionType
 
 interface MainSectionRepository {
     fun getSelected(): MainSectionType

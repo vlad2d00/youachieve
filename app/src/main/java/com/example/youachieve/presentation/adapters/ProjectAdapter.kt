@@ -1,12 +1,11 @@
 package com.example.youachieve.presentation.adapters
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.domain.models.Project
+import com.example.domain.models.workspace.Project
 import com.example.youachieve.R
 import com.example.youachieve.databinding.ItemProjectBinding
 import com.example.youachieve.presentation.adapters.listeners.ProjectActionListener
@@ -50,12 +49,11 @@ class ProjectAdapter(
             projectItemImageAvatar.setImageResource(R.drawable.project)
             projectItemImageCover.setImageResource(R.drawable.image_cover)
             projectItemText.text = item.name
-            Log.d("Test", "item.name \"${item.name}\"")
         }
     }
 
     override fun onClick(view: View) {
-        val item: Project = view.tag as Project
+        val item = view.tag as Project
 
         when (view.id) {
             R.id.projectItemButtonOther -> projectActionListener.onSettings(item)

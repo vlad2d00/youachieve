@@ -1,7 +1,7 @@
 package com.example.data.repository
 
 import com.example.data.storage.interfaces.WorkspaceUiDataStorage
-import com.example.domain.models.WorkspaceSectionCategory
+import com.example.domain.models.workspace.WorkspaceSectionCategory
 import com.example.domain.repository.WorkspaceUiDataRepository
 
 class WorkspaceUiDataRepositoryImpl(

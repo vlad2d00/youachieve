@@ -2,13 +2,15 @@ package com.example.youachieve.di
 
 import android.content.Context
 import com.example.data.repository.*
-import com.example.data.storage.db.room.interfaces.ProjectDbRoom
-import com.example.data.storage.db.room.interfaces.TaskDbRoom
-import com.example.data.storage.db.room.interfaces.WorkspaceDbRoom
+import com.example.data.storage.db.room.interfaces.ProjectRoomDb
+import com.example.data.storage.db.room.interfaces.TaskRoomDb
+import com.example.data.storage.db.room.interfaces.WorkspaceRoomDb
+import com.example.data.storage.db.sharedprefs.AuthorizationSharedPrefs
 import com.example.data.storage.interfaces.*
-import com.example.data.storage.ram.MainSectionRam
-import com.example.data.storage.ram.WorkspaceUiDataRam
-import com.example.data.storage.ram.WorkspaceSectionRam
+import com.example.data.storage.memory.DisplayMemory
+import com.example.data.storage.memory.MainSectionMemory
+import com.example.data.storage.memory.WorkspaceUiDataMemory
+import com.example.data.storage.memory.WorkspaceSectionMemory
 import com.example.domain.repository.*
 import dagger.Module
 import dagger.Provides
@@ -24,7 +26,7 @@ class DataModule {
     @Provides
     @Singleton
     fun provideMainSectionStorage(): MainSectionStorage {
-        return MainSectionRam()
+        return MainSectionMemory()
     }
 
     @Provides
@@ -38,7 +40,7 @@ class DataModule {
     @Provides
     @Singleton
     fun provideWorkspaceSectionStorage(): WorkspaceSectionStorage {
-        return WorkspaceSectionRam()
+        return WorkspaceSectionMemory()
     }
 
     @Provides
@@ -52,7 +54,7 @@ class DataModule {
     @Provides
     @Singleton
     fun provideWorkspaceUiDataStorage(): WorkspaceUiDataStorage {
-        return WorkspaceUiDataRam()
+        return WorkspaceUiDataMemory()
     }
 
     @Provides
@@ -66,7 +68,7 @@ class DataModule {
     @Provides
     @Singleton
     fun provideWorkspaceStorage(@ApplicationContext context: Context): WorkspaceStorage {
-        return WorkspaceDbRoom(context)
+        return WorkspaceRoomDb(context)
     }
 
     @Provides
@@ -80,7 +82,7 @@ class DataModule {
     @Provides
     @Singleton
     fun provideProjectStorage(@ApplicationContext context: Context): ProjectStorage {
-        return ProjectDbRoom(context)
+        return ProjectRoomDb(context)
     }
 
     @Provides
@@ -94,7 +96,7 @@ class DataModule {
     @Provides
     @Singleton
     fun provideTaskStorage(@ApplicationContext context: Context): TaskStorage {
-        return TaskDbRoom(context)
+        return TaskRoomDb(context)
     }
 
     @Provides
@@ -103,6 +105,34 @@ class DataModule {
         taskStorage: TaskStorage
     ): TaskRepository {
         return TaskRepositoryImpl(taskStorage = taskStorage)
+    }
+
+    @Provides
+    @Singleton
+    fun provideDisplayStorage(): DisplayStorage {
+        return DisplayMemory()
+    }
+
+    @Provides
+    @Singleton
+    fun provideDisplayRepository(
+        displayStorage: DisplayStorage
+    ): DisplayRepository {
+        return DisplayRepositoryImpl(displayStorage = displayStorage)
+    }
+
+    @Provides
+    @Singleton
+    fun provideAuthorizationStorage(@ApplicationContext context: Context): AuthorizationStorage {
+        return AuthorizationSharedPrefs(context = context)
+    }
+
+    @Provides
+    @Singleton
+    fun provideAuthorizationRepository(
+        authorizationStorage: AuthorizationStorage
+    ): AuthorizationRepository {
+        return AuthorizationRepositoryImpl(authorizationStorage = authorizationStorage)
     }
 
 }

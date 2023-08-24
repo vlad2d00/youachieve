@@ -1,9 +1,8 @@
 package com.example.data.repository
 
-import com.example.data.mapper.TaskMapper
 import com.example.data.storage.interfaces.TaskStorage
-import com.example.domain.models.Status
-import com.example.domain.models.Task
+import com.example.domain.models.base.Status
+import com.example.domain.models.workspace.Task
 import com.example.domain.repository.TaskRepository
 import java.time.LocalDateTime
 
@@ -52,42 +51,44 @@ class TaskRepositoryImpl(
         )
     }
 
-    override fun getTask(taskId: Long,
-                         status: Status?
+    override fun getTask(
+        taskId: Long,
+        status: Status?
     ): Task? {
-        val result = taskStorage.getTask(
+        return taskStorage.getTask(
             taskId = taskId,
             status = status
-        ) ?: return null
-        return TaskMapper.toDomain(result)
+        )
     }
 
     override fun getTaskList(
+        workspaceId: Long,
         projectId: Long,
         format: String?,
         datetimeBegin: LocalDateTime?,
         datetimeEnd: LocalDateTime?,
         isComplete: Boolean?,
+        count: Int?,
+        offset: Int,
         status: Status?
     ): List<Task>? {
-        val items = taskStorage.getTaskList(
+        return taskStorage.getTaskList(
+            workspaceId = workspaceId,
             projectId = projectId,
             format = format,
             datetimeBegin = datetimeBegin,
             datetimeEnd = datetimeEnd,
             isComplete = isComplete,
-            status = status
-        ) ?: return null
 
-        val result = ArrayList<Task>()
-        for (item in items) {
-            result.add(TaskMapper.toDomain(item))
-        }
-        return result.toList()
+            count = count,
+            offset = offset,
+            status = status
+        )
     }
 
-    override fun deleteTask(taskId: Long,
-                            status: Status?
+    override fun deleteTask(
+        taskId: Long,
+        status: Status?
     ) {
         taskStorage.deleteTask(
             taskId = taskId,

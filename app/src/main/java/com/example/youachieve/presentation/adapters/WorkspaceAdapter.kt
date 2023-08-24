@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.domain.models.Workspace
+import com.example.domain.models.workspace.Workspace
 import com.example.youachieve.R
-import com.example.youachieve.databinding.ItemProjectBinding
+import com.example.youachieve.databinding.ItemWorkspaceBinding
 import com.example.youachieve.presentation.adapters.listeners.WorkspaceActionListener
 
 class WorkspaceAdapter(
@@ -24,16 +24,16 @@ class WorkspaceAdapter(
     }
 
 
-    class WorkspaceViewHolder(val binding: ItemProjectBinding) : RecyclerView.ViewHolder(binding.root)
+    class WorkspaceViewHolder(val binding: ItemWorkspaceBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun getItemCount(): Int = data.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkspaceViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = ItemProjectBinding.inflate(inflater, parent, false)
+        val binding = ItemWorkspaceBinding.inflate(inflater, parent, false)
 
         binding.root.setOnClickListener(this)
-        binding.projectItemButtonOther.setOnClickListener(this)
+        binding.workspaceItemButtonSettings.setOnClickListener(this)
 
         return WorkspaceViewHolder(binding)
     }
@@ -43,20 +43,19 @@ class WorkspaceAdapter(
         val context = holder.itemView.context
 
         holder.itemView.tag = item
-        holder.binding.projectItemButtonOther.tag = item
+        holder.binding.workspaceItemButtonSettings.tag = item
 
         with(holder.binding) {
-            projectItemImageAvatar.setImageResource(R.drawable.workspace)
-            projectItemImageCover.setImageResource(R.drawable.image_cover)
-            projectItemText.text = item.name
+            workspaceItemImageAvatar.setImageResource(R.drawable.image_cover)
+            workspaceItemTextName.text = item.name
         }
     }
 
     override fun onClick(view: View) {
-        val item: Workspace = view.tag as Workspace
+        val item = view.tag as Workspace
 
         when (view.id) {
-            R.id.projectItemButtonOther -> workspaceActionListener.onSettings(item)
+            R.id.projectItemButtonOther -> workspaceActionListener.onSelect(item)
             else -> workspaceActionListener.onSelect(item)
         }
     }

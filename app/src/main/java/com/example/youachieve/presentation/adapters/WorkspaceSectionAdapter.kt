@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.example.domain.models.WorkspaceSection
+import com.example.domain.models.workspace.WorkspaceSection
 import com.example.youachieve.R
 import com.example.youachieve.databinding.ItemWorkspaceSectionBinding
 import com.example.youachieve.presentation.adapters.listeners.WorkspaceSectionActionListener
-import com.example.youachieve.presentation.utils.Resourses
+import com.example.youachieve.presentation.utils.MyResources
 
 class WorkspaceSectionAdapter(
     private val workspaceSectionActionListener: WorkspaceSectionActionListener
@@ -52,8 +52,8 @@ class WorkspaceSectionAdapter(
                 ContextCompat.getColor(context,R.color.text_on_background) else
                     ContextCompat.getColor(context,R.color.text_primary)
 
-            val image = Resourses.getDrawable(resourceName = item.resourceName, context = context)
-            val text = Resourses.getString(resourceName = item.resourceName, context = context)
+            val image = MyResources.getDrawable(resourceName = item.resourceName, context = context)
+            val text = MyResources.getString(resourceName = item.resourceName, context = context)
 
             workspaceSectionItemButton.setBackgroundResource(background)
 
@@ -66,7 +66,7 @@ class WorkspaceSectionAdapter(
     }
 
     override fun onClick(view: View) {
-        val item: WorkspaceSection = view.tag as WorkspaceSection
+        val item = view.tag as WorkspaceSection
         workspaceSectionActionListener.onSelect(item)
     }
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:background="@color/background_back"
-    tools:context=".presentation.ui.fragments.main.MainSectionsFragment"
+    tools:context=".presentation.fragments.main.MainSectionsFragment"
     android:orientation="vertical">
 
     <androidx.fragment.app.FragmentContainerView
@@ -22,7 +22,7 @@
         android:paddingBottom="1dp"
         app:itemIconSize="@dimen/icon_normal_plus"
         android:layout_gravity="bottom"
-        android:background="@drawable/background_navigation"
+        android:background="@drawable/background_main_navigation"
         android:layout_width="match_parent"
         android:layout_height="@dimen/header_height"
         android:scrollIndicators="left"/>

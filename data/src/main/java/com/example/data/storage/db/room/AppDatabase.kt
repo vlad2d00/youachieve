@@ -6,7 +6,7 @@ import com.example.data.storage.db.room.dao.*
 import com.example.data.storage.db.room.entities.*
 
 @Database(
-    version = 3,
+    version = 4,
     entities = [
         UserRoomEntity::class,
 
